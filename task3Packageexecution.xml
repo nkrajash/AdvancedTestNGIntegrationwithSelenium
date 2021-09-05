@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MultipleClassSuite">
+  <test thread-count="5" name="Test">
+  <packages>
+ 	<package name="task3"/>
+ 	<package name="task1"/>
+  </packages>
+    <classes>
+      <class name="task3.TestingClass1"/>
+      <class name="task3.TestingClass2"/>
+    </classes>
+  </test> <!-- Test for task1, task3 useful for Regression Tests -->
+</suite> <!-- Suite -->

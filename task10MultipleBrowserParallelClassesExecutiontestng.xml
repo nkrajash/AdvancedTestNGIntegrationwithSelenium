@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ParallelTestExecutionSuite">
+   <test name = "Parallel Tests" parallel = "classes" thread-count = "2">
+      <classes>
+         <class name = "task10.WebLinkCount_Chrome" />
+         <class name = "task10.WebLinkCount_Firefox" />
+      </classes>
+   </test> <!-- Test for task10 -->  
+</suite> <!-- ParallelTestExecutionSuite -->

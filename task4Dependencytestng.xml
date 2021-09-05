@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="TestNG XML Dependency Suite" >
+   <test name="DependencyTests" >
+       <classes>
+          <class name="task4.DependsOnGroups" />
+          <class name="task4.DependsOnMethodsTestNG" />
+          <class name="task4.GroupDependency" />
+          <class name="task4.InheritedDependentClass" />
+          <class name="task4.MultipleDependentTests" />
+          <class name="task4.SingleDependentTests" />
+       </classes>
+   </test>
+   <test name="ToolsQA" >
+   	<groups>
+   		<dependencies>
+   			<group depends-on= "openbrowser" name= "login"></group>
+   			<group depends-on= "login" name= "viewacc"></group>
+   			<group depends-on= "viewacc" name= "logout"></group>
+   		</dependencies>
+   		</groups>
+       <classes> 
+          <class name="task4.ToolSQA_GroupDependency" />
+       </classes>
+   </test>
+ </suite>
